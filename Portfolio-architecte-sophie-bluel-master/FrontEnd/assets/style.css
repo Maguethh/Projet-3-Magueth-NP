@@ -1,0 +1,571 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+	height: 100%;
+}
+
+.gallery article img {
+	height: 100%;
+}
+
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+#modale {
+	width: 40%;
+	height: 80%;
+	background-color: white;
+	top: 15%;
+	left: 30%;
+	z-index: 10;
+	position: fixed;
+	border-radius: 15px;
+	display: none;
+	transition: 0.2s;
+}
+
+
+.modalecontent {
+	width: 100%;
+	height: 70%;
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px 80px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+	grid-template-rows: 120px 120px 120px;
+	justify-content: center;
+}
+
+.titreLogin {
+	font-size: 50px;
+	font-weight: bolder;
+	color: #1D6154;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.titremodifier {
+	GAP: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginContainer {
+	width: 50%;
+	height: 50%;
+	background-color: white;
+	margin-left: 25%;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10%;
+}
+
+#email {
+	width: 70%;
+	height: 40px;
+	margin-bottom: 20px;
+	margin-left: 15%;
+	box-shadow: 0px 0px 10px -4px rgb(0 0 0 / 65%);
+	border: 1px black;
+}
+#password {
+	width: 70%;
+	height: 40px;
+	margin-bottom: 40px;
+	margin-left: 15%;
+	box-shadow: 0px 0px 10px -4px rgb(0 0 0 / 65%);
+	border: 1px black;
+}
+
+.loginfont{
+margin-left: 15%;
+padding-bottom: 1%;
+}
+
+#submitButton {
+	width: 30%;
+	margin-left: 35%;
+	height: 40px;
+	border-radius: 30px 30px 30px 30px;
+	background-color: #1D6154;
+	color: white;
+	font-family: 'Syne';
+	border: none;
+	cursor: pointer;
+}
+
+.mdpoublier {
+	text-align: center;
+	margin-top: 30px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: none;
+}
+
+#closemodale {
+	font-size: 20px;
+	font-weight: bolder;
+	margin-top: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+	right: 0px;
+	position: absolute;
+	cursor: pointer;
+	padding: 5px;
+}
+
+.modaletext {
+	text-align: center;
+	font-family: 'Syne';
+	margin-top: 6%;
+	font-size: 30px;
+	font-weight: lighter;
+	padding-bottom: 20px;
+
+}
+
+.filtre {
+	display: flex;
+	justify-content: space-evenly;
+	width: 50%;
+	align-items: center;
+	margin-left: 25%;
+	padding-bottom: 50px;
+	padding-top: 30px;
+}
+
+.btn-filtre  {
+
+	border-radius: 30px;
+	background-color: #ffffff;
+	color: #1D6154;
+	font-family: 'Syne';
+	font-size: 15px;
+	cursor: pointer;
+	border: solid 2px #1D6154;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.btn-filtre:hover {
+	background-color: #1D6154;
+	color: white;
+}
+
+.modifier {
+	display: flex;
+	flex-direction: row;
+	display: none;
+}
+
+
+.modifiertexte {
+	font-size: 20px;
+}
+
+.edit {
+	font-size: 20px;
+	padding-right: 5px;
+}
+
+.modifier {
+	cursor: pointer;
+}
+
+.ajouter-image {
+	width: 40%;
+	margin-left: 30%;
+	font-family: 'Syne';
+	font-size: 15px;
+	color: white;
+	background-color: #1D6154;
+	border-radius: 24px;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.supprimer-image {
+	width: 40%;
+	margin-left: 30%;
+	margin-top: 20px;
+	font-family: 'Syne';
+	color: red	;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.modaleimage {
+	Width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.modaleimage {
+	cursor: pointer;
+}
+
+.modaleimage.selected {
+	border: solid 2px #1D6154;
+	transition-duration: 0.1s;
+}
+
+.modaleactive {
+	border: solid 2px #1D6154;
+}
+
+
+.photo_upload_container {
+	height: 200px;
+	width: 60%;
+	margin: 0 auto;
+	background-color: #E8F1F7;
+	cursor: pointer;
+
+}
+
+#photo_upload_button {
+	font-family: "Syne";
+	background-color: #CBD6DC;
+	color: white;
+	border-radius: 30px;
+	font-size: 15px;
+	margin-left: 20%;
+	width: 60%;
+	padding: 10px;
+	color: #306685;	
+	border: none;
+	cursor: pointer;
+}
+
+.error-message {
+	display: none;
+	color: red;
+	margin-bottom: 10px;
+	text-align: center;
+
+}
+
+#project_creation_form {
+
+	display: none;
+}
+
+.modaletext2 {
+	text-align: center;
+	font-family: 'Syne';
+	margin-top: 6%;
+	font-size: 30px;
+	font-weight: lighter;
+	padding-bottom: 20px;
+
+}
+#modalefilter1 {
+	display: none;
+	position: fixed;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.30);
+}
+
+#title {
+	width: 70%;
+	margin-left: 15% ;
+	height: 36px;
+}
+
+#category {
+	width: 72%;
+	margin-left: 15% ;
+	height: 44px;	
+}
+
+#project_creation_submit {
+	width: 40%;
+	margin-left: 30%;
+	border-radius: 30px;
+	height: 40px;
+	color: #E8F1F7;
+	background-color: #1D6154;
+	border: none ;
+	font-size: 15px;
+	font-family: "Syne";
+	margin-top: 20%;
+	cursor: pointer;
+}
+
+.titletext {
+	width: 70%;
+	margin-left: 15%;
+	font-size: 15px;
+	padding-bottom: 5px;
+	padding-top: 30px;
+}
+.categorytext {
+	width: 70%;
+	margin-left: 15%;
+	font-size: 15px;
+	padding-bottom: 5px;
+	padding-top: 3	0px;	
+}
+
+.deletedIdMessage {
+	display: none;
+	color: #1D6154;
+}
+
+#photosrc {
+width: 50%;
+height: 100%;
+margin-left: 25%;
+position: relative;
+}
+
+.bandelette {
+	background-color: black;	
+	width: 1140px;
+
+	height: 5%;
+	BOTTOM: 95%;
+	z-index: 20;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	display: none;
+}
+
+.bandelettetext{
+	color: white;
+	width: 100%;
+	font-size: 15px;
+	font-weight: 900;
+	
+}
+
+.bandelettebutton{
+border-radius: 30px;
+background-color: white;
+color: black	;
+border: none;
+height: 70%;	
+font-weight: 600;
+margin-top: 6px;
+
+}
+
+.bandeletteedit{
+	color: white;
+	display: flex;
+padding: 10px;
+margin-top: 6px;
+}
+
+.photologo{
+	font-size: 100px;
+	color: #306685;
+	font-weight: 100;
+	text-align: center;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.phototext{
+	font-size: 15px;
+	width: 100%;
+	text-align: center	;
+	padding-top: 10px;
+	color: #306685;
+}

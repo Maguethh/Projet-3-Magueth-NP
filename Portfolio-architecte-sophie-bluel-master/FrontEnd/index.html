@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Sophie Bluel - Architecte d'intérieur</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="./assets/style.css">	
+		<script src="https://kit.fontawesome.com/abc6ee2392.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+
+			<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+			<nav>
+				<ul>
+					<li> <a href="index.html">projets</a></li>
+					<li>contact</li>
+					<li> <a id="loginbutton" href="connexion.html">login</a></li>
+					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="introduction">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">
+		</figure>
+		<article>
+			<h2>Designer d'espace</h2>
+			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+		</article>
+	</section>
+	
+	<section id="portfolio">
+		<div class="titremodifier">
+			<h2>Mes Projets</h2>
+			
+			<article class="modifier">
+				<i class="edit fa-solid fa-pen-to-square"></i>
+				<p class="modifiertexte">Modifier</p>
+			</article>
+		</div>
+		
+			<div class="filtre">
+				<button class="btn-filtre btn-tous" >Tous</button>
+				<button class="btn-filtre btn-objet" id="objet">Objets</button>
+				<button class="btn-filtre btn-appartement">Appartements</button>
+				<button class="btn-filtre btn-hotel-restaurant">Hotels & Restaurants</button>
+			</div>
+
+		<div class="gallery">
+
+		</div>
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+</main>
+
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+
+
+<div id="modalefilter1"></div>
+
+<div id="modale">
+		<span id="closemodale">X</span>
+
+
+		<div id="gallery">
+			
+			<p class="modaletext">Galerie photo</p>
+			<div class="modalecontent">
+			</div>
+		</div>
+		
+		
+		<div id="project_creation_form" class="form" style="display: none">
+			
+			<p class="modaletext2">Ajouter photo</p>
+			
+			<div id="photo_upload_container" class="photo_upload_container">
+				<img src="" alt="" id="photosrc" style="display:none">
+				<div id="photo_uploading">
+					<i class="photologo fa-regular fa-image"></i>
+					<button id="photo_upload_button" onclick="document.getElementById('photo_uploading').style.display = 'none'">Ajouter une photo</button>
+					<p class="phototext">jpg .png : 4 mo max</p>
+				</div>
+
+			</div>
+			<input type="file" onchange="document.getElementById('photosrc').src = window.URL.createObjectURL(this.files[0]);document.getElementById('photosrc').style.display='block'" id="photo" type="file" name="photo" style="display: none;">
+			
+			<p class="titletext">Titre</p>
+			<input id="title" type="text" name="title">
+			
+			<p class="categorytext">Catégorie</p>
+			<select id="category" name="category">
+				<option value="1">Objets</option>
+				<option value="2">Appartements</option>
+				<option value="3">Hôtel et Restaurants</option>
+			</select>
+			
+			<button id="project_creation_submit">Valider</button>
+			
+		</div>
+		
+		<div id="modale1btn">
+			<button class="ajouter-image">Ajouter une photo</button>
+			<button class="supprimer-image">Supprimer la galerie</button>
+		</div>
+		<p class="deletedIdMessage">L'image numéro a été supprimée</p>
+	</div>
+
+	<div id="modaletop" class="bandelette">
+		<div class="bandeletteedit">
+		<i class="edit fa-solid fa-pen-to-square"></i> <p class="bandelettetext"> Mode édition</p>
+		</div>
+		<button class="bandelettebutton">publier les changements</button>
+	</div>
+
+	
+	<script type="module" src="./scripts/card.js"></script>
+</body>
+</html>
