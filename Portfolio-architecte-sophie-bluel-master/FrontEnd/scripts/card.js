@@ -227,22 +227,27 @@ document
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         const sectionCard = document.querySelector(".gallery");
-
         const cardContainer = document.createElement("article");
-
         const imageCard = document.createElement("img");
         imageCard.id = "carte-" + data.id;
         imageCard.src = data.imageUrl;
-
         const descriptionCard = document.createElement("p");
         descriptionCard.innerText = data.title;
-
         sectionCard.appendChild(cardContainer);
-
         cardContainer.appendChild(imageCard);
         cardContainer.appendChild(descriptionCard);
+
+        // add the image to the modal
+        const sectionCard2 = document.querySelector(".modalecontent");
+        const cardContainer2 = document.createElement("article");
+        const imageCard2 = document.createElement("img");
+        imageCard2.id = "modale-carte-" + data.id;
+        imageCard2.src = data.imageUrl;
+        imageCard2.className = "modaleimage";
+        sectionCard2.appendChild(cardContainer2);
+        cardContainer2.appendChild(imageCard2);
       })
       .catch((error) => {
         console.log(error);
@@ -250,6 +255,7 @@ document
     document.getElementById("modale").style.display = "none";
     document.getElementById("modalefilter1").style.display = "none";
     document.getElementById("gallery").style.display = "block";
+    document.getElementById("photosrc").style.display = "none";
     genererCards();
     genererCardsModale();
   });
