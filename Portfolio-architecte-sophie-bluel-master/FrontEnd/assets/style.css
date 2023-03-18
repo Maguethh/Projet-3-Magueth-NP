@@ -342,6 +342,7 @@ a {
 	display: flex;
 	flex-direction: row;
 	display: none;
+	padding-top: 6px;
 }
 
 

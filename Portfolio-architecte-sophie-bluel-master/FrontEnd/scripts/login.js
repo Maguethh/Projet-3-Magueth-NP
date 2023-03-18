@@ -1,4 +1,5 @@
-function login() {
+function login(event) {
+  event.preventDefault();
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
@@ -15,7 +16,7 @@ function login() {
       console.log(data);
       if (data.token) {
         window.localStorage.setItem("token", data.token);
-        window.location.href = "/Frontend/index.html";
+        window.location.href = "index.html";
         document.querySelector(".modifier").style.display = "block";
       } else {
         document.querySelector(".error-message").style.display = "block";

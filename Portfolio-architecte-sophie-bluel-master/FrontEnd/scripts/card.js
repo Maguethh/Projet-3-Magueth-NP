@@ -65,14 +65,16 @@ boutonPage2.addEventListener("click", function () {
 genererCards(projets);
 
 const filtreTous = document.querySelector(".btn-tous");
-filtreTous.addEventListener("click", function () {
+filtreTous.addEventListener("click", function (event) {
+  event.preventDefault();
   console.log("Affichage de tout les projets");
   document.querySelector(".gallery").innerHTML = "";
   genererCards(projets);
 });
 
 const filtreObjet = document.querySelector(".btn-objet");
-filtreObjet.addEventListener("click", function () {
+filtreObjet.addEventListener("click", function (event) {
+  event.preventDefault();
   console.log("Affichage du filtre (Objets)");
   fetch("http://localhost:5678/api/categories", {
     method: "GET",
@@ -89,7 +91,8 @@ filtreObjet.addEventListener("click", function () {
 });
 
 const filtreAppartement = document.querySelector(".btn-appartement");
-filtreAppartement.addEventListener("click", function () {
+filtreAppartement.addEventListener("click", function (event) {
+  event.preventDefault();
   console.log("Affichage du filtre (Appartements)");
   fetch("http://localhost:5678/api/categories", {
     method: "GET",
@@ -106,7 +109,8 @@ filtreAppartement.addEventListener("click", function () {
 });
 
 const filtreHotelRestaurant = document.querySelector(".btn-hotel-restaurant");
-filtreHotelRestaurant.addEventListener("click", function () {
+filtreHotelRestaurant.addEventListener("click", function (event) {
+  event.preventDefault();
   console.log("Affichage du filtre (Hotel & Restaurants)");
   fetch("http://localhost:5678/api/categories", {
     method: "GET",
@@ -157,7 +161,8 @@ boutonModale.addEventListener("click", function () {
     });
 
     const modaleSupprimer = document.querySelector(".supprimer-image");
-    modaleSupprimer.addEventListener("click", function () {
+    modaleSupprimer.addEventListener("click", function (event) {
+      event.preventDefault();
       if (selectedImageId == 0) return;
       let elementToRemove = document.getElementById(
         "modale-carte-" + selectedImageId
@@ -190,7 +195,8 @@ document
 
 document
   .getElementById("project_creation_submit")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     let data = new FormData();
     data.append("title", document.getElementById("title").value);
     data.append("category", document.getElementById("category").value);
