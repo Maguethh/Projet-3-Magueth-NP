@@ -86,49 +86,55 @@
 
 <div id="modale">
 		<span id="closemodale">X</span>
-
-
-		<div id="gallery">
+		<span id="modale_backward"><i class="backarrow fa-sharp fa-solid fa-arrow-rotate-left"></i></span>
+		<div id="page1modale">
 			
-			<p class="modaletext">Galerie photo</p>
-			<div class="modalecontent">
-			</div>
-		</div>
-		
-		
-		<div id="project_creation_form" class="form" style="display: none">
-			
-			<p class="modaletext2">Ajouter photo</p>
-			
-			<div id="photo_upload_container" class="photo_upload_container">
-				<img src="" alt="" id="photosrc" style="display:none">
-				<div id="photo_uploading">
-					<i class="photologo fa-regular fa-image"></i>
-					<button id="photo_upload_button" onclick="document.getElementById('photo_uploading').style.display = 'none'">Ajouter une photo</button>
-					<p class="phototext">jpg .png : 4 mo max</p>
+			<div id="gallery">
+				
+				<p class="modaletext">Galerie photo</p>
+				<div class="modalecontent">
 				</div>
-
 			</div>
-			<input type="file" onchange="document.getElementById('photosrc').src = window.URL.createObjectURL(this.files[0]);document.getElementById('photosrc').style.display='block'" id="photo" type="file" name="photo" style="display: none;">
 			
-			<p class="titletext">Titre</p>
-			<input id="title" type="text" name="title">
-			
-			<p class="categorytext">Catégorie</p>
-			<select id="category" name="category">
-				<option value="1">Objets</option>
-				<option value="2">Appartements</option>
-				<option value="3">Hôtel et Restaurants</option>
-			</select>
-			
-			<button id="project_creation_submit">Valider</button>
-			
+			<div id="modale1btn">
+				<button class="ajouter-image">Ajouter une photo</button>
+				<button class="supprimer-image">Supprimer la galerie</button>
+			</div>
 		</div>
 		
-		<div id="modale1btn">
-			<button class="ajouter-image">Ajouter une photo</button>
-			<button class="supprimer-image">Supprimer la galerie</button>
+		<div id="page2modale">
+			
+			<div id="project_creation_form" class="form" style="display: none">
+				
+				<p class="modaletext2">Ajouter photo</p>
+				
+				<div id="photo_upload_container" class="photo_upload_container">
+					<img src="" alt="" id="photosrc" style="display:none">
+					<div id="photo_uploading">
+						<i class="photologo fa-regular fa-image"></i>
+						<button id="photo_upload_button" onclick="document.getElementById('photo_uploading').style.display = 'none'">Ajouter une photo</button>
+						<p class="phototext">jpg .png : 4 mo max</p>
+					</div>
+	
+				</div>
+				<input type="file" onchange="document.getElementById('photosrc').src = window.URL.createObjectURL(this.files[0]);document.getElementById('photosrc').style.display='block'" id="photo" type="file" name="photo" style="display: none;">
+				
+				<p class="titletext">Titre</p>
+				<input id="title" type="text" name="title">
+				
+				<p class="categorytext">Catégorie</p>
+				<select id="category" name="category">
+					<option value="1">Objets</option>
+					<option value="2">Appartements</option>
+					<option value="3">Hôtel et Restaurants</option>
+				</select>
+				
+				<button id="project_creation_submit">Valider</button>
+				
+			</div>
+
 		</div>
+
 		<p class="deletedIdMessage">L'image numéro a été supprimée</p>
 	</div>
 

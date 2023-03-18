@@ -60,6 +60,9 @@ boutonPage2.addEventListener("click", function () {
   modalePage1.style.display = "none";
   modalePage2.style.display = "block";
   boutonPage1.style.display = "none";
+  document.getElementById("photo_uploading").style.display = "block";
+  document.getElementById("modale_backward").style.display = "block";
+  document.getElementById("page2modale").style.display = "block";
 });
 
 genererCards(projets);
@@ -185,7 +188,16 @@ boutonModale.addEventListener("click", function () {
     });
   }
   document.getElementById("modale").style.display = "block";
+  document.getElementById("modale_backward").style.display = "none";
 });
+
+document
+  .getElementById("modale_backward")
+  .addEventListener("click", function () {
+    document.getElementById("page2modale").style.display = "none";
+    document.getElementById("gallery").style.display = "block";
+    document.getElementById("modale1btn").style.display = "block";
+  });
 
 document
   .getElementById("photo_upload_button")
@@ -231,6 +243,11 @@ document
       .catch((error) => {
         console.log(error);
       });
+    document.getElementById("modale").style.display = "none";
+    document.getElementById("modalefilter1").style.display = "none";
+    genererCards();
+    genererCardsModale();
+    genererCards(cardFiltrees);
   });
 
 if (window.localStorage.getItem("token")) {
