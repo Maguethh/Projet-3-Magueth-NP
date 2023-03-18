@@ -189,6 +189,10 @@ boutonModale.addEventListener("click", function () {
   }
   document.getElementById("modale").style.display = "block";
   document.getElementById("modale_backward").style.display = "none";
+  document.getElementById("page2modale").style.display = "none";
+  document.getElementById("page1modale").style.display = "block";
+  document.getElementById("gallery").style.display = "block";
+  document.getElementById("modale1btn").style.display = "block";
 });
 
 document
@@ -245,9 +249,9 @@ document
       });
     document.getElementById("modale").style.display = "none";
     document.getElementById("modalefilter1").style.display = "none";
+    document.getElementById("gallery").style.display = "block";
     genererCards();
     genererCardsModale();
-    genererCards(cardFiltrees);
   });
 
 if (window.localStorage.getItem("token")) {
