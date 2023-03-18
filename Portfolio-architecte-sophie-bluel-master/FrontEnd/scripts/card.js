@@ -256,8 +256,6 @@ document
     document.getElementById("modalefilter1").style.display = "none";
     document.getElementById("gallery").style.display = "block";
     document.getElementById("photosrc").style.display = "none";
-    genererCards();
-    genererCardsModale();
   });
 
 if (window.localStorage.getItem("token")) {
